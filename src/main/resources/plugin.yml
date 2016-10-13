@@ -1,0 +1,25 @@
+name: ${name}
+version: ${version}
+description: ${description}
+author: ${author}
+website: ${url}
+main: ${mainClass}
+depend: ${dependencies}
+commands:
+  lradd:
+    description: Give yourself a lightning rod.
+  lrlist:
+    description: List all available lightning rods.
+permissions:
+  lightningrods.strike:
+    default: true
+    description: Utilize the power of Zeus.
+  lightningrods.cooldown.bypass:
+    default: op
+    description: Unlimited power with no cooldown.
+  lightningrods.admin.commands.give:
+    default: op
+    description: Ability to give a lightning rod.
+  lightningrods.admin.commands.list:
+    default: op
+    description: List all lightning rods.
