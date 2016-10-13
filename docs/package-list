@@ -1,0 +1,8 @@
+com.matthewhatcher.lightningrods
+com.matthewhatcher.lightningrods.API
+com.matthewhatcher.lightningrods.Commands
+com.matthewhatcher.lightningrods.Listeners
+com.matthewhatcher.lightningrods.Permissions
+com.matthewhatcher.lightningrods.Rod
+com.matthewhatcher.lightningrods.Rod.Types
+com.matthewhatcher.lightningrods.Utils
