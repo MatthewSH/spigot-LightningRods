@@ -3,6 +3,7 @@ package com.matthewhatcher.lightningrods.Rod.Types;
 import java.util.List;
 
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -15,8 +16,8 @@ import com.matthewhatcher.lightningrods.Rod.RodCooler;
 
 public class BasicRod extends LightningRod
 {	
-	public BasicRod(LightningRods plugin) {
-		super(plugin, "Generic Lightning Rod", "generic", new RodCooler(5));
+	public BasicRod(LightningRods plugin, Material conductor) {
+		super(plugin, "Generic Lightning Rod", "generic", new RodCooler(5), conductor);
 	}
 	
 	@Override
