@@ -28,7 +28,7 @@ public class LightningAPI
 		
 		if(lr != null) {
 			ItemStack button = new ItemStack(Material.STONE_BUTTON, 1);
-			ItemStack rods = new ItemStack(Material.FENCE, amount);
+			ItemStack rods = new ItemStack(rod.getConductor(), amount);
 			ItemMeta buttonMeta = button.getItemMeta();
 			ItemMeta rodMeta = rods.getItemMeta();
 			
@@ -71,7 +71,7 @@ public class LightningAPI
 		
 		if(rod != null) {
 			ItemStack button = new ItemStack(Material.STONE_BUTTON, 1);
-			ItemStack rods = new ItemStack(Material.FENCE, amount);
+			ItemStack rods = new ItemStack(rod.getConductor(), amount);
 			ItemMeta buttonMeta = button.getItemMeta();
 			ItemMeta rodMeta = rods.getItemMeta();
 			
@@ -98,5 +98,21 @@ public class LightningAPI
 				ChatUtils.send(player, "The is no space in the inventory for the power of Zeus.");
 			}
 		}
+	}
+	
+	/**
+	 * Register a lightning rod with the rod manager.
+	 * @param rod
+	 */
+	public void registerRod(LightningRod rod) {
+		LightningRods.getInstance().getRodManager().register(rod);
+	}
+	
+	/**
+	 * Remove a lightning rod from a rod manager.
+	 * @param rod
+	 */
+	public void unregisterRod(LightningRod rod) {
+		LightningRods.getInstance().getRodManager().unregister(rod);
 	}
 }
