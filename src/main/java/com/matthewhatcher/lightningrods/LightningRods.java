@@ -1,5 +1,6 @@
 package com.matthewhatcher.lightningrods;
 
+import org.bukkit.Material;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.matthewhatcher.lightningrods.API.LightningAPI;
@@ -35,7 +36,7 @@ public class LightningRods extends JavaPlugin
 		LightningRods.instance = this;
 		
 		this.rodManager = new RodManager();
-		this.rodManager.register(new BasicRod(getInstance()));
+		this.rodManager.register(new BasicRod(getInstance(), Material.IRON_FENCE));
 		
 		this.strikeListener = new StrikeListener();
 		this.strikeListener.register();
