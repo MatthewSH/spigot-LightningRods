@@ -1,6 +1,6 @@
 package com.matthewhatcher.lightningrods.Rod;
 
-import org.bukkit.Bukkit;
+import org.bukkit.Material;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 
@@ -13,9 +13,11 @@ public class LightningRod
 	private LightningRods plugin;
 	private String name, localName;
 	private RodCooler cooler;
+	private Material conductor;
 	
-	public LightningRod(LightningRods plugin, String name, String localName, RodCooler cooler) {
+	public LightningRod(LightningRods plugin, String name, String localName, RodCooler cooler, Material conductor) {
 		this.cooler = cooler;
+		this.conductor = conductor;
 		this.name = name;
 		this.localName = localName;
 		this.plugin = plugin;
@@ -58,7 +60,9 @@ public class LightningRod
 		return this.cooler;
 	}
 	
-	public void onStrike(Player p) {
-		Bukkit.getLogger().info("Striking on position.");
+	public Material getConductor() {
+		return this.conductor;
 	}
+	
+	public void onStrike(Player p) {}
 }
